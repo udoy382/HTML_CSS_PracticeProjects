@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root{
+    --lighting-color: #0089b7;
+    --dark-color: #003d62;
+    --darker-color: #003252;
+    --secondary-color: #fff700;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body, html{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+    color: #fff;
+}
+
+body{
+    font-size: 1.4rem;
+}
+
+/* Header Section  */
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+header{
+    background-color: var(--lighting-color);
+}
+
+nav{
+    padding: 1rem;
+}
+
+nav ul{
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-left-content{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+nav li{
+    font-size: 1.8rem;
+    border-bottom: 0.4rem solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+nav li:hover{
+    border-bottom: 0.4rem solid var(--secondary-color);
+    transition: 0.3s ease-in-out;
+}
+
+/* Main Section  */
+
+
+#hero{
+    background-color: var(--darker-color);
+    padding: 4rem;
+    border-bottom: 4px solid var(--lighting-color);
+}
+
+.hero-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#hero h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hi-text{
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.name-text{
+    font-size: 5rem;
+}
+
+#hero h2{
+    font-size: 4rem;
+    font-weight: bold;
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret{
+    from,
+    to{
+        border-color: transparent;
+    }
+    50%{
+        border-color: orange;
+    }
+}
+
+
+/* Project Section  */
+
+#project{
+    background-color: var(--darker-color);
+}
+
+#project h2{
+    font-size: 6rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.project-content{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.flex-item{
+    margin: 2rem 0;
+}
+
+.flex-item .card-content{
+    font-size: 2rem;
+}
+
+.card{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+
+.card img{
+    padding-bottom: 2rem;
+}
+
+.card:hover img{
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+    opacity: 0.8;
+    padding-bottom: 2rem;
+}
